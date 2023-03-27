@@ -20,24 +20,12 @@ class _ProfileDetailsState extends State<ProfileDetails> {
     login
     bio
     repositories(first: 10) {
-      pageInfo {
-        endCursor
-        startCursor
-      }
-      totalCount
       edges {
         node {
           id
           name
-          viewerHasStarred
         }
       }
-    }
-    followers {
-      totalCount
-    }
-    following {
-      totalCount
     }
   }
 }
@@ -56,8 +44,6 @@ class _ProfileDetailsState extends State<ProfileDetails> {
           if (result.isLoading) {
             return const Text('Loading...');
           }
-
-          print(result.data);
 
           final userDetails = result.data?['user'];
           List repositories = result.data?['user']['repositories']['edges'];

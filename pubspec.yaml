@@ -40,6 +40,7 @@ dependencies:
   graphql_codegen: ^0.11.0-beta.2
   graphql: ^5.1.2-beta.4
   graphql_flutter: ^5.1.1-beta.4
+  flutter_bloc: ^8.1.2
   web_socket_channel: 2.2.0
 
 dev_dependencies:

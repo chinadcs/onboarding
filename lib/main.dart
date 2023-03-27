@@ -6,7 +6,7 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 void main() async {
   await initHiveForFlutter();
 
-  const String token = "";
+  const String token = "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";
   final HttpLink httpLink = HttpLink('https://api.github.com/graphql');
   final AuthLink authLink = AuthLink(
     getToken: () async => 'Bearer $token',
