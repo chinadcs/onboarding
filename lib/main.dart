@@ -94,8 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextField(controller: myController),
             TextButton(
                 onPressed: () => {
-                      Navigator.push(
-                          context,
+                      Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => ProfileDetails(
                                     username: myController.text,

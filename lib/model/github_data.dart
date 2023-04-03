@@ -13,16 +13,16 @@ class User {
   String email;
   String login;
   String bio;
-  Repositories repositories;
+  List repositories;
 
-  factory User.fromJson(Map<String, dynamic> json) => User(
-        avatarUrl: json["avatarUrl"],
-        name: json["name"],
-        email: json["email"],
-        login: json["login"],
-        bio: json["bio"],
-        repositories: Repositories.fromJson(json["repositories"]),
-      );
+  // factory User.fromJson(Map<String, dynamic> json) => User(
+  //       avatarUrl: json["avatarUrl"],
+  //       name: json["name"],
+  //       email: json["email"],
+  //       login: json["login"],
+  //       bio: json["bio"],
+  //       repositories: Repositories.fromJson(json["repositories"]),
+  //     );
 
   Map<String, dynamic> toJson() => {
         "avatarUrl": avatarUrl,
@@ -30,7 +30,7 @@ class User {
         "email": email,
         "login": login,
         "bio": bio,
-        "repositories": repositories.toJson(),
+        // "repositories": repositories.toJson(),
       };
 }
 

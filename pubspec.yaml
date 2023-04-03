@@ -31,7 +31,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -41,12 +40,13 @@ dependencies:
   graphql: ^5.1.2-beta.4
   graphql_flutter: ^5.1.1-beta.4
   flutter_bloc: ^8.1.2
+  bloc: ^8.1.1
   web_socket_channel: 2.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  test: ^1.21.1
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

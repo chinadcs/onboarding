@@ -1,5 +1,5 @@
 String query = """
-    query GithubGraphQL(\$login: String!) {
+query GithubGraphQL(\$login: String!) {
   user(login: \$login) {
     avatarUrl(size: 200)
     name
@@ -16,4 +16,4 @@ String query = """
     }
   }
 }
-      """;
+""";

@@ -2,24 +2,24 @@
 import 'package:onboarding/model/github_data.dart';
 
 abstract class GithubState {
-  List<User> user;
+  User? user;
   GithubState({
     required this.user,
   });
 }
 
 class LoadingState extends GithubState {
-  LoadingState() : super(user: []);
+  LoadingState() : super(user: null);
 }
 
 class GitInitialState extends GithubState {
-  GitInitialState() : super(user: []);
+  GitInitialState() : super(user: null);
 }
 
 class LoadedState extends GithubState {
-  LoadedState({required List<User> user}) : super(user: user);
+  LoadedState({required User user}) : super(user: user);
 }
 
 class ErrorState extends GithubState {
-  ErrorState() : super(user: []);
+  ErrorState() : super(user: null);
 }

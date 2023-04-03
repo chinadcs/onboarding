@@ -4,7 +4,7 @@ void client() async {
   await initHiveForFlutter();
 }
 
-const String token = "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";
+const String token = "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";
 final HttpLink httpLink = HttpLink('https://api.github.com/graphql');
 final AuthLink authLink = AuthLink(
   getToken: () async => 'Bearer $token',
@@ -16,6 +16,6 @@ GraphQLClient clientToQuery() {
   return GraphQLClient(
     // cache: OptimisticCache(dataIdFromObject: typenameDataIdFromObject),
     cache: GraphQLCache(store: HiveStore()),
-    link: httpLink,
+    link: link,
   );
 }
