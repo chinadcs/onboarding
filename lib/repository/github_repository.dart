@@ -16,11 +16,11 @@ class GithubRepository {
     print(variable);
     QueryResult result = await _client.query(QueryOptions(
         document: gql(query), variables: {"login": variable.trim()}));
-    print('---------------------------');
-    print(result);
-    print('---------------------------');
     if (!result.hasException) {
       List repositories = result.data?['user']['repositories']['edges'];
+      print('---------------------------');
+      print(repositories);
+      print('---------------------------');
       User user = User(
           avatarUrl: result.data!["user"]["avatarUrl"],
           name: result.data!["user"]["name"],
@@ -31,6 +31,6 @@ class GithubRepository {
       return user;
     }
 
-    throw Error();
+    throw Exception('Ocorreu um erro!');
   }
 }

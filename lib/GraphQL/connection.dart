@@ -4,7 +4,7 @@ void client() async {
   await initHiveForFlutter();
 }
 
-const String token = "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";
+const String token = "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";
 final HttpLink httpLink = HttpLink('https://api.github.com/graphql');
 final AuthLink authLink = AuthLink(
   getToken: () async => 'Bearer $token',

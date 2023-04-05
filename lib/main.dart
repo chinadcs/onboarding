@@ -6,7 +6,7 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 void main() async {
   await initHiveForFlutter();
 
-  const String token = "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";
+  const String token = "ghp_rzsw3gT5xRQJrt5yXcFhOrCQDKf4UA17l"; //Pdc
   final HttpLink httpLink = HttpLink('https://api.github.com/graphql');
   final AuthLink authLink = AuthLink(
     getToken: () async => 'Bearer $token',
@@ -88,20 +88,22 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextField(controller: myController),
-            TextButton(
-                onPressed: () => {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => ProfileDetails(
-                                    username: myController.text,
-                                  )))
-                    },
-                child: const Text('Save'))
-          ],
+        child: SizedBox(
+          width: 200,
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextField(controller: myController),
+              TextButton(
+                  onPressed: () => {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => ProfileDetails(
+                                  username: myController.text,
+                                )))
+                      },
+                  child: const Text('Save'))
+            ],
+          ),
         ),
       ),
     );
